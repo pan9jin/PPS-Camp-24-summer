@@ -1,9 +1,3 @@
-from collections import deque
-n = int(input())
-l = deque((map(int, input().split())))
-result = []
-tot_sum = sum(l)
-for _ in range(n):
-    result.append(tot_sum - l[-1])
-    l.rotate(1)
-print(min(result))
+a, b = map(int, input().split())
+l = [i for i in range(1, 1000) for _ in range(i)]
+print(sum(l[i-1] for i in range(a, b+1)))
