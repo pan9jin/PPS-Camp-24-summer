@@ -5,13 +5,13 @@ l = [int(input()) for _ in range(n)]
 score = [0] * n
 if n == 0:
     print(0)
-    exit(1)
+    exit(0)
 elif n == 1:
     print(l[0])
-    exit(1)
+    exit(0)
 elif n == 2:
     print(l[0] + l[1])
-    exit(1)
+    exit(0)
 score[0] = l[0]
 score[1] = l[0] + l[1]
 score[2] = max(l[0] + l[2], l[1] + l[2])
